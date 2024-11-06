@@ -1,0 +1,32 @@
+.content-wrapper {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar-brand {
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+.text-overlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+}
+
+.img_one {
+  width: 100%;
+  height: 300%;
+}
+.img_two {
+  width: 100%;
+  height: 410px;
+}
+.img_three {
+  width: 100%;
+  height: 410px;
+}
+
+
