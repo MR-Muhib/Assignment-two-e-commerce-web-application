@@ -1,16 +1,35 @@
 #parent__div {
   padding: 0 1rem;
 }
+
+/* max width wrap large device control */
 .content-wrapper {
   max-width: 72rem;
   margin-left: auto;
   margin-right: auto;
 }
-.navbar-brand {
+
+/* logo custom design */
+#logo {
   text-transform: uppercase;
+  font-family: "Oleo Script", system-ui;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
   font-weight: 600;
+  color: #a72894;
+  font-size: 1.7rem;
 }
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Carousel Container */
+#carousel__container {
+  background-color: #ffd3cd;
+  margin: 5px 0;
+  box-shadow: 2px 4px 4px gray;
+}
+/* Carousel Absolute custom Text design */
 .text-overlay {
   top: 50%;
   left: 50%;
@@ -19,19 +38,21 @@
   padding: 10px;
 }
 
-.img_one {
-  width: 100%;
-  height: 300%;
-}
-.img_two {
-  width: 100%;
-  height: 410px;
-}
-.img_three {
-  width: 100%;
-  height: 410px;
+/* Carousel caption custom design */
+
+#text_carousel_over {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: yellow;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+  padding: 10px;
 }
 
+/* Carousel image custom width and height */
+#carousel__image {
+  width: 300px;
+}
+
+/* Timer custom styling */
 #timer {
   font-size: 24px;
   font-weight: bold;
@@ -50,6 +71,7 @@
   -o-transition: color 0.3s ease-in-out;
 }
 
+/* Contact form custom styling */
 #contact_form {
   margin-top: 20px;
   background-color: #f2f2f2;
@@ -59,6 +81,20 @@
   text-align: left;
   color: #333;
 }
+
+/* Selling image container */
+
+#selling__image {
+  width: 70%;
+  margin: 0 2rem;
+  padding-top: 4rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+#selling__image:hover {
+  transform: scale(1.3);
+}
+/* Footer custom styling  Start*/
 .footer {
   text-align: center; /* This centers the entire content inside the footer */
 }
@@ -80,4 +116,41 @@ i {
   background: #fff;
   border-radius: 50%;
   transition: background 0.3s ease-in-out;
+}
+/* Footer custom styling  End*/
+
+/* Add to cart button */
+#add-to-cart {
+  background-color: #a72894;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#add-to-cart:hover {
+  background-color: #080909;
+  color: white;
+}
+
+/* Card image customize */
+#card_image_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 4px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#card_img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
 }

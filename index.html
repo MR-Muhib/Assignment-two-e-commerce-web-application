@@ -18,16 +18,23 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fira+Code:wght@300..700&family=Oleo+Script:wght@400;700&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
 
-  <!-- Navbar start-->
+  <!-- Wrap the full web container-->
   <div class="content-wrapper" id="parent__div">
 
-
+    <!-- Navbar start-->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top ">
-      <a class="navbar-brand text-worning" href="#">Phuler</a>
+      <a class="navbar-brand" id="logo" href="#">Phuler</a>
 
       <!-- Toggle button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,24 +42,23 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- Navbar items -->
+      <div></div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
         <ul class="navbar-nav mr-auto">
-
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#" onclick="setActive(this)">Home</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="#About">About</a>
+            <a class="nav-link" href="#About" onclick="setActive(this)">About</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link disabled" href="#contact_form">Contact</a>
+            <a class="nav-link disabled" href="#contact_form" onclick="setActive(this)">Contact</a>
           </li>
-
         </ul>
 
-        <!-- Search bar -->
+        <!-- Search bar-->
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -68,33 +74,41 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
 
-      <!-- Image container start -->
-      <div class="carousel-inner">
-
+      <!-- Carousel Image container start -->
+      <div class="carousel-inner" id="carousel__container">
         <!-- ?carousel div one -->
-        <div class=" carousel-item bg-info active position-relative">
-          <img class="img_one d-block mx-auto"
-            src="https://png.pngtree.com/png-clipart/20230710/ourmid/pngtree-flowers-png-image_7506581.png"
+        <div class=" carousel-item active position-relative">
+          <img class="img_one d-block mx-auto" id="carousel__image"
+            src="https://fyf.tac-cdn.net/images/products/large/F-503_A3.jpg?auto=webp&quality=80&width=414"
             alt="First slide">
 
           <!-- Text centered over the image -->
           <div class=" text-overlay position-absolute text-center w-100">
-            <h1 class="text-danger text-uppercase bg-warning">Welcome to my world!</h1>
+            <h1 class="text-uppercase" id="text_carousel_over">Welcome to my world!</h1>
           </div>
         </div>
 
         <!-- ?carousel div two -->
-        <div class="carousel_images_container carousel-item bg-info">
-          <img class="img_two d-block mx-auto"
-            src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg"
+        <div class="carousel_images_container carousel-item">
+          <img class="img_two d-block mx-auto" id="carousel__image"
+            src="https://fyf.tac-cdn.net/images/products/large/F-503_A2.jpg?auto=webp&quality=80&width=414"
             alt="Second slide">
         </div>
 
         <!-- ?carousel div three -->
-        <div class="carousel_images_container carousel-item bg-info">
-          <img class="img_three d-block mx-auto" src="https://thumbs.dreamstime.com/b/flowers-4999705.jpg"
+        <div class="carousel_images_container carousel-item">
+          <img class="img_three d-block mx-auto" id="carousel__image"
+            src="https://fyf.tac-cdn.net/images/products/large/F-503_A1.jpg?auto=webp&quality=80&width=414"
             alt="Third slide">
         </div>
+
+        <!-- ?carousel div Four -->
+        <div class="carousel_images_container carousel-item bg-info">
+          <img class="img_three d-block mx-auto" id="carousel__image"
+            src="https://fyf.tac-cdn.net/images/products/large/F-208.jpg?auto=webp&quality=80&width=414"
+            alt="Third slide">
+        </div>
+
       </div>
       <!-- Image container end -->
 
@@ -110,13 +124,15 @@
     </div>
     <!-- Controls end -->
 
-    <!-- Content Layout Card Section -->
+
+
+    <!-- Card Section One Start-->
     <section class=" ">
       <div class="row">
 
-        <div class="card col-sm gap-1">
-          <img class="card-img-top"
-            src="https://st.depositphotos.com/1664950/1624/i/450/depositphotos_16249749-stock-photo-bouquet-from-blue-hydrangeas-and.jpg"
+        <div class="card col-sm gap-1" id="card_image_div">
+          <img class="card-img-top" id="card_img"
+            src="https://fyf.tac-cdn.net/images/products/large/F-208.jpg?auto=webp&quality=80&width=414"
             alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -126,9 +142,9 @@
           </div>
         </div>
 
-        <div class="card col-sm gap-1">
-          <img class="card-img-top"
-            src="https://media.istockphoto.com/id/155357427/photo/bouquet.jpg?s=612x612&w=0&k=20&c=hAUETTs4gydbtQhCci6Et85Weo6SNxjr9AXJSH8veS0="
+        <div class="card col-sm gap-1" id="card_image_div">
+          <img class="card-img-top" id="card_img"
+            src="https://fyf.tac-cdn.net/images/products/large/F-336.jpg?auto=webp&quality=80&width=414"
             alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -138,9 +154,9 @@
           </div>
         </div>
 
-        <div class="card col-sm ">
-          <img class="card-img-top"
-            src="https://img.freepik.com/free-photo/top-view-beautiful-roses-bouquet-with-pink-ribbon_23-2148822309.jpg?semt=ais_hybrid"
+        <div class="card col-sm " id="card_image_div">
+          <img class="card-img-top" id="card_img"
+            src="https://fyf.tac-cdn.net/images/products/large/F-503.jpg?auto=webp&quality=80&width=414"
             alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -152,17 +168,63 @@
 
       </div>
     </section>
+    <!-- Card Section One end-->
+
+    <!-- Card Section Two start-->
+    <section class=" ">
+      <div class="row">
+
+        <div class="card col-sm gap-1" id="card_image_div">
+          <img class="card-img-top" id="card_img"
+            src="https://st.depositphotos.com/1664950/1624/i/450/depositphotos_16249749-stock-photo-bouquet-from-blue-hydrangeas-and.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card col-sm gap-1" id="card_image_div">
+          <img class="card-img-top" id="card_img"
+            src="https://media.istockphoto.com/id/155357427/photo/bouquet.jpg?s=612x612&w=0&k=20&c=hAUETTs4gydbtQhCci6Et85Weo6SNxjr9AXJSH8veS0="
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card col-sm " id="card_image_div">
+          <img class="card-img-top" id="card_img"
+            src="https://fyf.tac-cdn.net/images/products/large/F-506.jpg?auto=webp&quality=80&width=414"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Card section Two end -->
+
 
     <!-- About Section: Start -->
     <div id="About" class="mt-5 mb-5">
 
       <!-- About title -->
       <h1>Best Selling Products</h1>
-      <div class="grid row mt-5">
+      <div id="about__container" class="grid row mt-5">
 
         <!-- Product image container -->
         <div class="image_content col-md">
-          <img src="https://phuler.myshopify.com/cdn/shop/files/deal-1.png?v=1613740608" alt="">
+          <img id="selling__image" src="https://phuler.myshopify.com/cdn/shop/files/deal-1.png?v=1613740608" alt="">
         </div>
 
         <!-- Product description container -->
@@ -188,8 +250,54 @@
             <!-- Dynamic Count down -->
           </p>
 
-          <!-- Add to cart button -->
-          <a href="#" class="btn btn-primary block">Buy Now</a>
+          <!-- ?Add to cart button -->
+          <button class="type=" button" id="add-to-cart" class="" data-toggle="modal" data-target="#exampleModal">
+            SHOP NOW
+          </button>
+        </div>
+      </div>
+
+      <!--! Modal popup add to cart -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <!-- Cart form Start-->
+            <div>
+              <div class="modal-body">
+                <p>Are you sure you want to add this product to your cart?</p>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <div class="form-group">
+                    <label for="product_name">Product Name:</label>
+                    <input type="text" class="form-control" id="product_name" value="Product Name" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="product_price">Product Price:</label>
+                    <input type="text" class="form-control" id="product_price" value="Price: $15.99" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="form-control" id="quantity" min="1" value="1">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Cart form End-->
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="submit_your_product">Submit</button>
+            </div>
+          </div>
         </div>
       </div>
 

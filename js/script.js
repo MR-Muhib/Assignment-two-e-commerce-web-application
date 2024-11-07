@@ -69,3 +69,20 @@ contactBtn.addEventListener("click", function (event) {
   // print the form information into console
   console.log(userInfo);
 });
+
+// Popups submit form information
+const submitPopup = document.querySelector("#submit_your_product");
+
+submitPopup.addEventListener("click", function (event) {
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  alert(`Thank you for your purchase! Your form information has been sent.`);
+  console.log(userInfo);
+});
+
+function setActive(element) {
+  const activeElements = document.getElementsByClassName("active");
+  for (let i = 0; i < activeElements.length; i++) {
+    activeElements[i].classList.remove("active");
+  }
+  element.classList.add("active");
+}
