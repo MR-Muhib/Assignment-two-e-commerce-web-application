@@ -79,10 +79,16 @@ submitPopup.addEventListener("click", function (event) {
   console.log(userInfo);
 });
 
-function setActive(element) {
-  const activeElements = document.getElementsByClassName("active");
-  for (let i = 0; i < activeElements.length; i++) {
-    activeElements[i].classList.remove("active");
-  }
-  element.classList.add("active");
+// Active navigation button
+function setActive(activeId) {
+  // Get all navigation items
+  const navItems = document.querySelectorAll(".nav-item");
+
+  // Remove 'active' class from all nav items
+  navItems.forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // Add 'active' class to the clicked item
+  document.getElementById(activeId).classList.add("active");
 }

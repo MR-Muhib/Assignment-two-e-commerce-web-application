@@ -15,7 +15,7 @@
   font-family: "Oleo Script", system-ui;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
   font-weight: 600;
-  color: #a72894;
+  color: #ff0000;
   font-size: 1.7rem;
 }
 .nav-link {
@@ -25,10 +25,13 @@
 
 /* Carousel Container */
 #carousel__container {
+  width: 100%;
+  height: 350px;
   background-color: #ffd3cd;
   margin: 5px 0;
   box-shadow: 2px 4px 4px gray;
 }
+
 /* Carousel Absolute custom Text design */
 .text-overlay {
   top: 50%;
@@ -39,7 +42,6 @@
 }
 
 /* Carousel caption custom design */
-
 #text_carousel_over {
   background-color: rgba(0, 0, 0, 0.3);
   color: yellow;
@@ -50,6 +52,32 @@
 /* Carousel image custom width and height */
 #carousel__image {
   width: 300px;
+}
+
+/* Card section one */
+#section__one,
+#section__two {
+  padding: 0.6rem;
+}
+/* Card image customize */
+#card_image_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 8px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 2px 4px 4px gray;
+}
+#card_img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+#card_img:hover {
+  transform: scale(1.1);
 }
 
 /* Timer custom styling */
@@ -71,6 +99,36 @@
   -o-transition: color 0.3s ease-in-out;
 }
 
+/* About section start */
+#About {
+  padding-bottom: 3.3rem;
+}
+
+/* Title about Section */
+.title_about_section {
+  color: black;
+  text-transform: uppercase;
+  font-family: "Oleo Script", system-ui;
+  text-shadow: 2px 2px 2px rgba(79, 1, 205, 0.8);
+  font-size: 2.5rem;
+  padding-top: 5rem;
+}
+
+/* Selling image container */
+#selling__image {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  margin: auto;
+  padding-top: 2.5rem;
+}
+
+#selling__image:hover {
+  transform: scale(1.3);
+}
+
 /* Contact form custom styling */
 #contact_form {
   margin-top: 20px;
@@ -82,18 +140,6 @@
   color: #333;
 }
 
-/* Selling image container */
-
-#selling__image {
-  width: 70%;
-  margin: 0 2rem;
-  padding-top: 4rem;
-  transition: transform 0.5s ease-in-out;
-}
-
-#selling__image:hover {
-  transform: scale(1.3);
-}
 /* Footer custom styling  Start*/
 .footer {
   text-align: center; /* This centers the entire content inside the footer */
@@ -136,21 +182,4 @@ i {
 #add-to-cart:hover {
   background-color: #080909;
   color: white;
-}
-
-/* Card image customize */
-#card_image_div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  margin: 4px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#card_img {
-  width: 150px;
-  height: 200px;
-  object-fit: cover;
 }

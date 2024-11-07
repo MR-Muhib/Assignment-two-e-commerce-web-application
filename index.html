@@ -33,7 +33,7 @@
   <div class="content-wrapper" id="parent__div">
 
     <!-- Navbar start-->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top ">
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <a class="navbar-brand" id="logo" href="#">Phuler</a>
 
       <!-- Toggle button -->
@@ -43,20 +43,20 @@
       </button>
 
       <!-- Navbar items -->
-      <div></div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#" onclick="setActive(this)">Home</a>
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item " id="home">
+            <a class="nav-link " href="#" onclick="setActive('home')">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#About" onclick="setActive(this)">About</a>
+          <li class="nav-item" id="about">
+            <a class="nav-link " href="#About" onclick="setActive('about')">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#contact_form" onclick="setActive(this)">Contact</a>
+          <li class="nav-item" id="contact">
+            <a class="nav-link " href="#contact_form" onclick="setActive('contact')">Contact</a>
           </li>
         </ul>
+
 
         <!-- Search bar-->
         <form class="form-inline my-2 my-lg-0">
@@ -65,6 +65,7 @@
         </form>
       </div>
     </nav>
+    <!-- Navbar End -->
 
     <!-- Controls Start -->
     <div id="carouselExampleIndicators" class="carousel slide mb-3" data-ride="carousel">
@@ -101,16 +102,9 @@
             src="https://fyf.tac-cdn.net/images/products/large/F-503_A1.jpg?auto=webp&quality=80&width=414"
             alt="Third slide">
         </div>
-
-        <!-- ?carousel div Four -->
-        <div class="carousel_images_container carousel-item bg-info">
-          <img class="img_three d-block mx-auto" id="carousel__image"
-            src="https://fyf.tac-cdn.net/images/products/large/F-208.jpg?auto=webp&quality=80&width=414"
-            alt="Third slide">
-        </div>
-
       </div>
       <!-- Image container end -->
+
 
       <!-- Controls -->
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -127,7 +121,7 @@
 
 
     <!-- Card Section One Start-->
-    <section class=" ">
+    <section id="section__one">
       <div class="row">
 
         <div class="card col-sm gap-1" id="card_image_div">
@@ -171,7 +165,7 @@
     <!-- Card Section One end-->
 
     <!-- Card Section Two start-->
-    <section class=" ">
+    <section id="section__two">
       <div class="row">
 
         <div class="card col-sm gap-1" id="card_image_div">
@@ -217,10 +211,9 @@
 
     <!-- About Section: Start -->
     <div id="About" class="mt-5 mb-5">
-
       <!-- About title -->
-      <h1>Best Selling Products</h1>
-      <div id="about__container" class="grid row mt-5">
+      <h1 class="title_about_section">Best Selling Products</h1>
+      <div id="about" class="grid row mt-5">
 
         <!-- Product image container -->
         <div class="image_content col-md">
