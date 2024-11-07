@@ -1,5 +1,5 @@
 // Timer count down
-// Set the end date and time for the sale
+//! Set the end date and time for the sale
 const endDate = new Date("2024-11-10T00:00:00"); // Set your end date here (e.g., Nov 10, 2024)
 
 function updateTimer() {
@@ -31,3 +31,41 @@ const timerInterval = setInterval(updateTimer, 1000);
 
 // Initial call to display the timer
 updateTimer();
+
+//! Handle contact form
+const contactBtn = document.getElementById("btn");
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
+
+contactBtn.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent form submission
+
+  const nameValue = fullName.value.trim(); // Corrected line
+  const emailValue = email.value.trim();
+  const messageValue = message.value.trim(); // Avoid reusing the `message` variable name
+
+  const userInfo = {};
+
+  if (nameValue === "" || emailValue === "" || messageValue === "") {
+    alert("Please fill in all fields.");
+    return;
+  } else {
+    // Submit the form
+    alert(`Thank you for contacting us! Your message has been sent.`);
+    // store the form information in the object
+    userInfo.name = nameValue;
+    userInfo.email = emailValue;
+    userInfo.message = messageValue;
+
+    // Store the form information in local storage
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
+    // Clear form fields
+    fullName.value = "";
+    email.value = "";
+    message.value = "";
+  }
+  // print the form information into console
+  console.log(userInfo);
+});
